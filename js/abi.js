@@ -1,0 +1,71 @@
+// InstantWheel ABI (از کد شما)
+export const ABI = [
+  { inputs: [], stateMutability: "nonpayable", type: "constructor" },
+  {
+    inputs: [],
+    name: "minBet",
+    outputs: [{ type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [{ type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "houseEdgeBP",
+    outputs: [{ type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "winPct",
+    outputs: [{ type: "uint8" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "drawPct",
+    outputs: [{ type: "uint8" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getWinTable",
+    outputs: [{ type: "uint8[]" }, { type: "uint16[]" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "winTableLen",
+    outputs: [{ type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ name: "salt", type: "uint256" }],
+    name: "play",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, name: "player", type: "address" },
+      { indexed: false, name: "wheel", type: "uint256" },
+      { indexed: false, name: "outcome", type: "uint8" },
+      { indexed: false, name: "payout", type: "uint256" },
+    ],
+    name: "Played",
+    type: "event",
+  },
+];
