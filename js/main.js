@@ -14,7 +14,7 @@ import {
 document.addEventListener("DOMContentLoaded", async () => {
   bootWheelOnce();
   refreshWalletPanels();
-
+  // console.log("Test")
   // Buttons
   $("connectBtn").addEventListener("click", () => openModal($("connectModal")));
   $("accountPill").addEventListener("click", () => {
